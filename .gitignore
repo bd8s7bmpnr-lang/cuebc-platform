@@ -8,3 +8,7 @@ coverage/
 *.log
 playwright-report/
 test-results/
+.local/
+.cache/
+supabase/.temp/
+supabase/.branches/

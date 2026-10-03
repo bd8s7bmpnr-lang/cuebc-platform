@@ -1,1 +1,21 @@
-{"name":"cuebc-platform","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.js","check":"node --check docs/app/app.js && node --check docs/app/views.js && node --check docs/app/admin.js && node --check docs/app/model.js"}}
+{
+  "name": "cuebc-platform",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check.mjs",
+    "backend:start": "node scripts/backend.mjs start",
+    "backend:status": "node scripts/backend.mjs status",
+    "backend:stop": "node scripts/backend.mjs stop",
+    "test:backend": "node scripts/backend.mjs verify",
+    "verify": "npm test && npm run check && npm run test:backend"
+  },
+  "devDependencies": {
+    "pg": "8.23.1",
+    "supabase": "2.119.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

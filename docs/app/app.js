@@ -2,10 +2,13 @@ import * as M from './model.js';
 import * as U from './ui.js';
 import {attendeeView,publicShell,demoBar,brand,summary} from './views.js';
 import {adminView,adminShell,filteredRegistrations,emailRecipients} from './admin.js';
-const KEY='cuebc.frontend.v1';let state;try{const raw=JSON.parse(localStorage.getItem(KEY));state=raw?.version===M.VERSION?raw:M.seed();}catch{state=M.seed();}
+import {environment} from './environment.js';
+import {createPreviewStore} from './data.js';
+const store=createPreviewStore(environment,{getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value)},M.seed,M.VERSION);
+const KEY=store.key;let state=store.load();
 M.savedWorkshops(state);
 const root=document.querySelector('#app'),dialog=document.querySelector('#dialog');let toastTimer;let lastFocus;let pendingRole='Administrator';
-function persist(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch{toast('Browser storage is full or unavailable. Changes may not survive a reload.');}}
+function persist(){try{store.save(state);}catch{toast('Browser storage is full or unavailable. Changes may not survive a reload.');}}
 function toast(text){clearTimeout(toastTimer);const el=document.querySelector('#toast');el.className='toast';el.textContent=text;toastTimer=setTimeout(()=>{el.className='';el.textContent='';},5000);}
 function route(){const raw=location.hash.replace(/^#\/?/,'');const [path,query]=raw.split('?');return {parts:path.split('/').filter(Boolean),q:new URLSearchParams(query||'')};}
 function go(path){if(location.hash==='#/'+path)render();else location.hash='/'+path;}

@@ -46,3 +46,7 @@ GitHub Pages publishes `main:/docs`. Hash routing supports direct page links and
 - `tests/model.test.js`: business rules, exports and route-render regression checks
 
 See `FRONTEND-COVERAGE.md` for the mockup-to-implementation map and validation record.
+
+## Backend foundation
+
+Milestone 1 adds an isolated Supabase development foundation, database migrations, environment safeguards and repeatable database tests. The public frontend remains in demo mode. See [BACKEND.md](BACKEND.md) for installation, verification, scope, and the local sandbox limitation.
