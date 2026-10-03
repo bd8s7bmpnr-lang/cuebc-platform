@@ -1,0 +1,11 @@
+{
+  "desktop_images": 70,
+  "mobile_images": 23,
+  "missing_local_targets": [],
+  "contrast": {
+    "white_on_orange": 5.08,
+    "blue_on_white": 5.13,
+    "muted_on_surface": 5.16,
+    "ink_on_white": 12.75
+  }
+}

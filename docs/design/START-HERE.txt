@@ -1,0 +1,9 @@
+CUEBC VISUAL MOCKUP SET
+
+Open index.html in a browser to browse all 93 images: 70 desktop screens and states plus 23 mobile views.
+
+Full-resolution JPGs are in screens/. Editable screen sources, shared styles.css, and preview.js are included.
+
+Read handoff.html for the design specification, verified sources, example-data boundaries and launch dependencies.
+
+These are visual mockups. Preview controls do not process payments, send messages or save live registrations.

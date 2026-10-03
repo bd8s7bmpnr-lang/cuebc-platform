@@ -1,0 +1,632 @@
+[
+  {
+    "id": "01-home",
+    "title": "SHIFT Happens!",
+    "mode": "home",
+    "subtitle": "",
+    "group": "",
+    "action": "",
+    "note": "Official date, venue, attendance modes and poster. Workshop times are not yet published."
+  },
+  {
+    "id": "02-program",
+    "title": "Find your next idea.",
+    "mode": "attendee",
+    "subtitle": "Explore learning that fits your classroom, interests and experience.",
+    "group": "",
+    "action": "",
+    "note": "Real workshop titles and presenters; excerpt of the offered program. No room or block assignments are asserted."
+  },
+  {
+    "id": "03-workshop",
+    "title": "AI in Middle School",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 / Offered workshops",
+    "group": "",
+    "action": "",
+    "note": "Paraphrased workshop description. Schedule and delivery remain unconfirmed."
+  },
+  {
+    "id": "04-information",
+    "title": "Let’s get you registered.",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 · Friday, October 23",
+    "group": "",
+    "action": "",
+    "note": "Core fields follow the current registration form, including required address and phone. Dietary/accessibility are proposed additions; organizer configurable."
+  },
+  {
+    "id": "05-ticket",
+    "title": "Choose your ticket.",
+    "mode": "attendee",
+    "subtitle": "Five registration categories. One conference community.",
+    "group": "",
+    "action": "",
+    "note": "Prices verified against the official 2026 form. Hybrid is a session delivery mode, not a ticket. Presenter invitations require a configured code."
+  },
+  {
+    "id": "06-workshops",
+    "title": "Build your workshop schedule.",
+    "mode": "attendee",
+    "subtitle": "Optional registration path / Reserved seating",
+    "group": "",
+    "action": "",
+    "note": "Illustrative future configuration only. Session times, rooms, capacities and availability are sample values."
+  },
+  {
+    "id": "07-review",
+    "title": "Everything look right?",
+    "mode": "attendee",
+    "subtitle": "Confirm your details before payment.",
+    "group": "",
+    "action": "",
+    "note": "Mockup button demonstrates the next screen; implementation must require both acknowledgements. Legal notice text requires CUEBC approval."
+  },
+  {
+    "id": "08-payment",
+    "title": "Complete your registration.",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 · All amounts in CAD",
+    "group": "",
+    "action": "",
+    "note": "Payment controls are illustrative. Use provider-hosted fields, idempotent submission and server-side payment confirmation in implementation."
+  },
+  {
+    "id": "09-confirmation",
+    "title": "You’re registered, Maya.",
+    "mode": "attendee",
+    "subtitle": "Registration CUE26-00487",
+    "group": "",
+    "action": "",
+    "note": "Illustrative successful payment and email-delivery state; confirmation only after verified payment."
+  },
+  {
+    "id": "10-portal",
+    "title": "Welcome back, Maya.",
+    "mode": "attendee",
+    "subtitle": "Your conference, all in one place.",
+    "group": "",
+    "action": "",
+    "note": "QR badges/check-in scanning are excluded from v1; registration number remains available for manual lookup."
+  },
+  {
+    "id": "11-receipt",
+    "title": "Your receipt.",
+    "mode": "attendee",
+    "subtitle": "CUE26-00487 / Payment",
+    "group": "",
+    "action": "",
+    "note": "Sample receipt, not a tax invoice. CUEBC must confirm issuer address and tax treatment; avoid inventing a GST number or exemption."
+  },
+  {
+    "id": "12-edit",
+    "title": "Edit your registration.",
+    "mode": "attendee",
+    "subtitle": "Maya Chen · CUE26-00487",
+    "group": "",
+    "action": "",
+    "note": "Email changes require verification. Price-changing edits handled through authorized organizer flow."
+  },
+  {
+    "id": "13-online-portal",
+    "title": "Your online conference.",
+    "mode": "attendee",
+    "subtitle": "Friday, October 23 · Times shown in Pacific time",
+    "group": "",
+    "action": "",
+    "note": "Separate sample online attendee. Join URLs are private and access-gated, never exposed in public program data."
+  },
+  {
+    "id": "14-sign-in",
+    "title": "Welcome to My CUEBC.",
+    "mode": "attendee",
+    "subtitle": "Your registration, receipt and conference information.",
+    "group": "",
+    "action": "",
+    "note": "Proposed magic-link authentication. Neutral confirmation protects account existence; rate limiting and expiring tokens required."
+  },
+  {
+    "id": "15-venue",
+    "title": "Plan your day.",
+    "mode": "attendee",
+    "subtitle": "Friday, October 23, 2026 · Saanich and online",
+    "group": "",
+    "action": "",
+    "note": "Official conference day structure. Parking, Wi-Fi, catering and social details intentionally unconfirmed."
+  },
+  {
+    "id": "16-messages",
+    "title": "Conference messages.",
+    "mode": "attendee",
+    "subtitle": "Updates tied to your registration.",
+    "group": "",
+    "action": "",
+    "note": ""
+  },
+  {
+    "id": "17-attendee-waitlist",
+    "title": "A place may open up.",
+    "mode": "attendee",
+    "subtitle": "Conference waitlist / Alternative capacity state",
+    "group": "",
+    "action": "",
+    "note": "Illustrative capacity state, not the actual current CUEBC availability. Separate from individual workshop waitlists."
+  },
+  {
+    "id": "18-payment-status",
+    "title": "Your payment needs attention.",
+    "mode": "attendee",
+    "subtitle": "Your details are saved. You don’t need to start again.",
+    "group": "",
+    "action": "",
+    "note": "Declined state; separate pending screen avoids prompting duplicate payments while provider status is unknown."
+  },
+  {
+    "id": "19-registration-closed",
+    "title": "Registration is closed.",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 / Closed registration state",
+    "group": "",
+    "action": "",
+    "note": "Alternative lifecycle state. Do not imply walk-ins are guaranteed after capacity or closing time."
+  },
+  {
+    "id": "20-cancel",
+    "title": "Cancel your registration?",
+    "mode": "attendee",
+    "subtitle": "You can review this before confirming.",
+    "group": "",
+    "action": "",
+    "note": "Destructive action requires explicit acknowledgement, re-check of state, confirmation screen/email and audited release of reservations."
+  },
+  {
+    "id": "21-library",
+    "title": "Your conferences.",
+    "mode": "organizer",
+    "subtitle": "A home for every year of CUEBC.",
+    "group": "",
+    "action": "<a class=\"btn primary\" href=\"22-create-conference.html\">Create conference</a>",
+    "note": "2026 confirmed; 2027 draft and all registration counts are sample. Copying excludes attendee and financial data."
+  },
+  {
+    "id": "22-create-conference",
+    "title": "Create a conference.",
+    "mode": "organizer",
+    "subtitle": "Conference library / New conference",
+    "group": "Settings",
+    "action": "",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "23-dashboard",
+    "title": "Good morning, Alex.",
+    "mode": "organizer",
+    "subtitle": "CUEBC 2026 · Friday, October 2",
+    "group": "Overview",
+    "action": "<div class=\"actions\"><a class=\"btn secondary\" href=\"01-home.html\">Preview public site</a><a class=\"btn primary\" href=\"47-walk-in.html\">Add registration</a></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "24-registrations",
+    "title": "Registrations",
+    "mode": "organizer",
+    "subtitle": "Search, filter and manage every registration.",
+    "group": "Registrations",
+    "action": "<a class=\"btn primary\" href=\"47-walk-in.html\">Add registration</a>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "25-attendee-detail",
+    "title": "Maya Chen",
+    "mode": "organizer",
+    "subtitle": "CUE26-00487 / Registered October 2, 2026",
+    "group": "Registrations",
+    "action": "<a class=\"btn secondary\" href=\"24-registrations.html\">Back to registrations</a>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "26-program-builder",
+    "title": "Build the conference day.",
+    "mode": "organizer",
+    "subtitle": "Published workshop content and draft timetable are managed separately.",
+    "group": "Program",
+    "action": "<div class=\"actions\"><a class=\"btn secondary\" href=\"02-program.html\">Preview</a><button class=\"btn secondary\" type=\"button\">Publish schedule</button></div>",
+    "note": "Official time blocks; room placement, capacities and conflicts are illustrative. Publishing is blocked by unresolved issues; no actual schedule is claimed."
+  },
+  {
+    "id": "27-session-editor",
+    "title": "Edit workshop",
+    "mode": "organizer",
+    "subtitle": "Program / Workshop details",
+    "group": "Program",
+    "action": "",
+    "note": "Sample editor. Online fields only appear for hybrid/online. Cancelled sessions trigger attendee notification review and alternative-seat handling."
+  },
+  {
+    "id": "28-presenters",
+    "title": "Presenters",
+    "mode": "organizer",
+    "subtitle": "Keep people, workshops and presentation needs connected.",
+    "group": "Presenters",
+    "action": "<a class=\"btn primary\" href=\"29-presenter-detail.html\">Add presenter</a>",
+    "note": "Presenter names from the offered workshops. Completeness/AV states and counts are illustrative; secure self-service invitations are deferred beyond v1."
+  },
+  {
+    "id": "29-presenter-detail",
+    "title": "Tara Baird",
+    "mode": "organizer",
+    "subtitle": "Presenters / Profile and logistics",
+    "group": "Presenters",
+    "action": "",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "30-waitlists",
+    "title": "Waitlists",
+    "mode": "organizer",
+    "subtitle": "Manage conference places separately from workshop seats.",
+    "group": "Waitlists",
+    "action": "",
+    "note": "Alternate reserved/capacity configuration. Promotion does not silently mark paid or confirm registration; every skip/removal has an audited reason."
+  },
+  {
+    "id": "31-payments",
+    "title": "Payments",
+    "mode": "organizer",
+    "subtitle": "Reconcile registration payments, receipts and exceptions.",
+    "group": "Payments",
+    "action": "",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "32-refund",
+    "title": "Review a refund exception.",
+    "mode": "organizer",
+    "subtitle": "Payments / Finance administrator only",
+    "group": "Payments",
+    "action": "",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "33-communications",
+    "title": "Communications",
+    "mode": "organizer",
+    "subtitle": "Send useful updates and see whether they arrive.",
+    "group": "Communications",
+    "action": "<a class=\"btn primary\" href=\"34-compose.html\">New message</a>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "34-compose",
+    "title": "Write a conference update.",
+    "mode": "organizer",
+    "subtitle": "Communications / Compose → Preview → Send",
+    "group": "Communications",
+    "action": "",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "35-message-preview",
+    "title": "Check before you send.",
+    "mode": "organizer",
+    "subtitle": "Communications / Final review",
+    "group": "Communications",
+    "action": "",
+    "note": "Send action is a visual mockup only; explicit confirmation, recipient re-evaluation, deduplication and per-recipient delivery tracking required."
+  },
+  {
+    "id": "36-reports",
+    "title": "What do you need to know?",
+    "mode": "organizer",
+    "subtitle": "Start with the question. Export only what you need.",
+    "group": "Reports",
+    "action": "",
+    "note": "Attendance report distinguishes expected registrations from manual arrived status. QR scanning is out of v1 scope."
+  },
+  {
+    "id": "37-custom-export",
+    "title": "Build a custom export.",
+    "mode": "organizer",
+    "subtitle": "Reports / Custom export",
+    "group": "Reports",
+    "action": "",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "38-form-builder",
+    "title": "Registration form",
+    "mode": "organizer",
+    "subtitle": "Make the form fit CUEBC. Keep it easy to complete.",
+    "group": "Registration form",
+    "action": "<div class=\"actions\"><a class=\"btn secondary\" href=\"04-information.html\">Preview form</a><button class=\"btn primary\" type=\"button\">Publish form</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "39-settings",
+    "title": "Conference settings",
+    "mode": "organizer",
+    "subtitle": "Conference settings",
+    "group": "Settings",
+    "action": "<div class=\"actions\"><button class=\"btn secondary\" type=\"button\">Discard</button><button class=\"btn primary\" type=\"button\">Save changes</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "40-registration-settings",
+    "title": "Registration settings",
+    "mode": "organizer",
+    "subtitle": "Conference settings",
+    "group": "Settings",
+    "action": "<div class=\"actions\"><button class=\"btn secondary\" type=\"button\">Discard</button><button class=\"btn primary\" type=\"button\">Save changes</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "41-workshop-settings",
+    "title": "Workshop settings",
+    "mode": "organizer",
+    "subtitle": "Conference settings",
+    "group": "Settings",
+    "action": "<div class=\"actions\"><button class=\"btn secondary\" type=\"button\">Discard</button><button class=\"btn primary\" type=\"button\">Save changes</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "42-payment-settings",
+    "title": "Payment settings",
+    "mode": "organizer",
+    "subtitle": "Conference settings",
+    "group": "Settings",
+    "action": "<div class=\"actions\"><button class=\"btn secondary\" type=\"button\">Discard</button><button class=\"btn primary\" type=\"button\">Save changes</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "43-email-settings",
+    "title": "Email settings",
+    "mode": "organizer",
+    "subtitle": "Conference settings",
+    "group": "Settings",
+    "action": "<div class=\"actions\"><button class=\"btn secondary\" type=\"button\">Discard</button><button class=\"btn primary\" type=\"button\">Save changes</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "44-branding",
+    "title": "Branding",
+    "mode": "organizer",
+    "subtitle": "Conference settings",
+    "group": "Settings",
+    "action": "<div class=\"actions\"><button class=\"btn secondary\" type=\"button\">Discard</button><button class=\"btn primary\" type=\"button\">Save changes</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "45-team",
+    "title": "Team & permissions",
+    "mode": "organizer",
+    "subtitle": "Conference settings",
+    "group": "Settings",
+    "action": "<div class=\"actions\"><button class=\"btn secondary\" type=\"button\">Discard</button><button class=\"btn primary\" type=\"button\">Save changes</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "46-privacy",
+    "title": "Privacy & data",
+    "mode": "organizer",
+    "subtitle": "Conference settings",
+    "group": "Settings",
+    "action": "<div class=\"actions\"><button class=\"btn secondary\" type=\"button\">Discard</button><button class=\"btn primary\" type=\"button\">Save changes</button></div>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "47-walk-in",
+    "title": "Walk-in registration",
+    "mode": "organizer",
+    "subtitle": "Quick entry for the registration desk.",
+    "group": "Registrations",
+    "action": "",
+    "note": "Sample conference-day state. Simplified fields require configured organizer override with actor/reason; capacity checked atomically before confirmation."
+  },
+  {
+    "id": "48-walk-in-pending",
+    "title": "Payment link sent.",
+    "mode": "organizer",
+    "subtitle": "Walk-in registration / Awaiting verified payment",
+    "group": "Registrations",
+    "action": "",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "49-system-states",
+    "title": "Clear recovery, at every step.",
+    "mode": "organizer",
+    "subtitle": "Supporting empty, error, permission and conflict states.",
+    "group": "Overview",
+    "action": "",
+    "note": "Component-state board. Production also needs loading, unsaved-change confirmation, expired-session recovery and stale-record conflict handling."
+  },
+  {
+    "id": "50-design-system",
+    "title": "One system. Every screen.",
+    "mode": "spec",
+    "subtitle": "Visual specification / Design handoff",
+    "group": "",
+    "action": "",
+    "note": "Proposed digital system, not an official CUEBC brand manual. All interface screens are rendered from one shared stylesheet."
+  },
+  {
+    "id": "51-my-schedule",
+    "title": "Your conference schedule.",
+    "mode": "attendee",
+    "subtitle": "Plan ahead / Open-choice conference mode",
+    "group": "",
+    "action": "",
+    "note": ""
+  },
+  {
+    "id": "52-sign-in-sent",
+    "title": "Check your inbox.",
+    "mode": "attendee",
+    "subtitle": "My CUEBC / Secure access",
+    "group": "",
+    "action": "",
+    "note": "Neutral response avoids disclosing registration existence. Resend must be rate limited."
+  },
+  {
+    "id": "53-waitlist-status",
+    "title": "You’re on the waitlist.",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 / Conference waitlist",
+    "group": "",
+    "action": "",
+    "note": "Illustrative alternative lifecycle state."
+  },
+  {
+    "id": "54-payment-pending",
+    "title": "We’re checking your payment.",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 / Payment verification",
+    "group": "",
+    "action": "",
+    "note": "Processing state must poll server reconciliation; no retry payment CTA until result is known."
+  },
+  {
+    "id": "55-policies",
+    "title": "Registration information",
+    "mode": "attendee",
+    "subtitle": "Policy content / Launch dependency",
+    "group": "",
+    "action": "",
+    "note": "Only the no-refund statement is verified. Terms/privacy must be supplied or approved by CUEBC; mockups cannot settle these decisions."
+  },
+  {
+    "id": "56-waitlist-offer",
+    "title": "A conference place is available.",
+    "mode": "attendee",
+    "subtitle": "Conference waitlist / Time-limited offer",
+    "group": "",
+    "action": "",
+    "note": "Illustrative offer, expiry and attendee; acceptance must validate offer server-side and prevent double allocation."
+  },
+  {
+    "id": "57-inclusion-workshop",
+    "title": "Designing for Inclusion with Canva!",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 / Offered workshops",
+    "group": "",
+    "action": "",
+    "note": "Real offered workshop; description condensed for the mockup. Final schedule not published."
+  },
+  {
+    "id": "58-knowledge-workshop",
+    "title": "The Teacher’s Knowledge Base, Powered by AI",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 / Offered workshops",
+    "group": "",
+    "action": "",
+    "note": "Real offered workshop; description condensed for the mockup. Final schedule not published."
+  },
+  {
+    "id": "59-assessment-workshop",
+    "title": "Designing AI-Resilient Assessments",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 / Offered workshops",
+    "group": "",
+    "action": "",
+    "note": "Real offered workshop; description condensed for the mockup. Final schedule not published."
+  },
+  {
+    "id": "60-cancelled",
+    "title": "Your registration is cancelled.",
+    "mode": "attendee",
+    "subtitle": "CUEBC 2026 / Cancellation complete",
+    "group": "",
+    "action": "",
+    "note": "Alternative state after an explicitly confirmed cancellation. Historic receipt remains available."
+  },
+  {
+    "id": "61-walk-in-confirmed",
+    "title": "Walk-in confirmed.",
+    "mode": "organizer",
+    "subtitle": "Walk-in registration / Verified payment",
+    "group": "Registrations",
+    "action": "",
+    "note": "Alternative completed state for the walk-in sample. Manual arrival status only, no QR badge scanning in v1."
+  },
+  {
+    "id": "62-bulk-actions",
+    "title": "Review a bulk action.",
+    "mode": "organizer",
+    "subtitle": "Registrations / Selected records",
+    "group": "Registrations",
+    "action": "",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "63-organizer-sign-in",
+    "title": "Organizer sign-in",
+    "mode": "attendee",
+    "subtitle": "Restricted to authorized conference team members.",
+    "group": "",
+    "action": "",
+    "note": "Proposed organizer authentication; password field rendered as illustration. Production requires secure password input and server-side rate limiting."
+  },
+  {
+    "id": "64-organizer-verification",
+    "title": "Verify it’s you.",
+    "mode": "attendee",
+    "subtitle": "Organizer security / Multi-factor verification",
+    "group": "",
+    "action": "",
+    "note": "Proposed multi-factor authentication. Accessible recovery and session-expiry handling required."
+  },
+  {
+    "id": "65-attendee-workshops",
+    "title": "Maya Chen · Workshops",
+    "mode": "organizer",
+    "subtitle": "Registration CUE26-00487",
+    "group": "Registrations",
+    "action": "<a class=\"btn secondary\" href=\"24-registrations.html\">Back to registrations</a>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "66-attendee-payment",
+    "title": "Maya Chen · Payment",
+    "mode": "organizer",
+    "subtitle": "Registration CUE26-00487",
+    "group": "Registrations",
+    "action": "<a class=\"btn secondary\" href=\"24-registrations.html\">Back to registrations</a>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "67-attendee-comms",
+    "title": "Maya Chen · Communications",
+    "mode": "organizer",
+    "subtitle": "Registration CUE26-00487",
+    "group": "Registrations",
+    "action": "<a class=\"btn secondary\" href=\"24-registrations.html\">Back to registrations</a>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "68-attendee-activity",
+    "title": "Maya Chen · Activity",
+    "mode": "organizer",
+    "subtitle": "Registration CUE26-00487",
+    "group": "Registrations",
+    "action": "<a class=\"btn secondary\" href=\"24-registrations.html\">Back to registrations</a>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "69-attendee-notes",
+    "title": "Maya Chen · Notes",
+    "mode": "organizer",
+    "subtitle": "Registration CUE26-00487",
+    "group": "Registrations",
+    "action": "<a class=\"btn secondary\" href=\"24-registrations.html\">Back to registrations</a>",
+    "note": "Illustrative organizer records and configuration; no live transactions or messages."
+  },
+  {
+    "id": "70-online-live",
+    "title": "Your online conference is live.",
+    "mode": "attendee",
+    "subtitle": "My CUEBC / Conference-day access",
+    "group": "",
+    "action": "",
+    "note": "Illustrative event-day state and workshop block. Links are nonfunctional in this mockup. Real join URLs require server-side eligibility checks and release windows."
+  }
+]
