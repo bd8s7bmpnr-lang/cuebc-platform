@@ -35,3 +35,7 @@ The original 70 mockups are retained unchanged in `docs/design/`. Some represent
 The local data model is intentionally separate from view rendering. Production integration must replace local persistence and simulated actions with server-side identity/roles, transactional seat allocation, provider payment events, durable email delivery, audited database records, and retention processing. No browser-only implementation can supply these guarantees.
 
 Official CUEBC source links and design research remain in `docs/design/handoff.html`. The current preview is suitable for frontend review and workflow testing, not collecting production registrations.
+
+## Pre-client review
+
+A focused first-time tester review added registration-step guards for the pricing shortcut, sample registration details, clearer preview navigation, attendee/conference-specific saved shortlists with preservation of existing browser data, recipient-specific preview receipt links, accurate sign-in request messaging, and online workshop access in open-choice mode. Six regression tests bring the automated suite to 26 passing tests. Browser verification exercised pricing-to-confirmation, switching sample accounts, and resending a receipt to a different attendee.

@@ -34,5 +34,36 @@ export function offer(c,w){if(w.status!=='Waiting')throw Error('Only waiting ent
 export function expire(c){for(const w of c.waitlist)if(['Offered','Accepted'].includes(w.status)&&!w.consumed&&Date.parse(w.expires)<=Date.now())w.status='Expired';}
 export function acceptOffer(s,id){const c=conf(s),w=c.waitlist.find(x=>x.id===id);expire(c);if(!w||w.status!=='Offered')throw Error('This offer is unavailable or has expired.');if(w.type==='workshop'){const r=c.registrations.find(r=>r.email.toLowerCase()===w.email.toLowerCase()&&r.status==='Paid');if(!r)throw Error('A paid conference registration is required.');const next=[...new Set([...r.workshops,w.workshop])];validateChoices(c,{...r,offer:w.id},next);r.workshops=next;w.consumed=true;s.session.attendee=r.id;}else{s.draft={email:w.email,first:w.name.split(' ')[0],last:w.name.split(' ').slice(1).join(' '),workshops:[],extras:{},offer:w.id};}w.status='Accepted';log(c,`Waitlist offer accepted: ${w.name}`);return w;}
 export function saveWorkshop(c,data){const capacity=Number(data.capacity);if(data.room&&c.roomCaps?.[data.room]&&capacity>c.roomCaps[data.room])throw Error('Workshop capacity exceeds the room capacity.');if(!data.title?.trim()||!data.presenter)throw Error('A workshop needs a title and presenter.');if(!Number.isInteger(capacity)||capacity<1)throw Error('Capacity must be a positive whole number.');if(data.id&&capacity<booked(c,data.id))throw Error('Capacity cannot be below existing reservations.');if(data.block&&data.room){const clash=c.workshops.find(w=>w.id!==data.id&&w.block===data.block&&(w.room===data.room||w.presenter===data.presenter));if(clash)throw Error(`Schedule conflict with “${clash.title}”. Choose another room or time.`);}if(data.url&&!/^https:\/\//.test(data.url))throw Error('Online links must start with https://.');const old=c.workshops.find(w=>w.id===data.id),w={...old,...data,capacity,id:data.id||uid()};if(w.published&&!c.people.find(p=>p.id===w.presenter)?.consent)throw Error('The presenter must approve publication before this workshop can be published.');if(old){const candidate={...c,workshops:c.workshops.map(x=>x.id===w.id?w:x)};for(const r of c.registrations.filter(r=>r.status==='Paid'&&r.workshops.includes(w.id)))validateChoices(candidate,r,r.workshops);}if(old)Object.assign(old,w);else c.workshops.push(w);log(c,`Workshop saved: ${w.title}`);return w;}
-export function copyConference(s,data){const source=conf(s),copy=structuredClone(source);Object.assign(copy,{id:uid(),title:data.title,date:data.date,status:'Draft',registrations:[],waitlist:[],communications:[],audit:[],codes:[],requests:[]});copy.workshops.forEach(w=>{w.url='';w.published=false;w.block='';w.room='';});s.conferences.push(copy);s.active=copy.id;s.session.attendee=null;s.draft={};return copy;}
+export function copyConference(s,data){const source=conf(s),copy=structuredClone(source);Object.assign(copy,{id:uid(),title:data.title,date:data.date,status:'Draft',registrations:[],waitlist:[],communications:[],audit:[],codes:[],requests:[]});copy.workshops.forEach(w=>{w.url='';w.published=false;w.block='';w.room='';});s.conferences.push(copy);s.active=copy.id;s.session.attendee=null;s.draft={};s.emailDraft=null;copy.saved=[];return copy;}
 export const can=(s,area)=>s.session.admin&&(s.session.role==='Administrator'||({Program:['program','presenters'],Finance:['payments','reports','registrations'],Checkin:['walkin','registrations'],Communications:['communications']}[s.session.role]||[]).includes(area));
+
+// Keep old preview data while moving personal shortlists into their proper scope.
+export function savedWorkshops(s){
+ const c=conf(s),r=c.registrations.find(x=>x.id===s.session.attendee),owner=r||c;
+ owner.saved??=[];
+ if(!s.savedScoped){owner.saved=[...new Set([...owner.saved,...(s.saved||[])])];s.saved=[];s.savedScoped=true;}
+ return owner.saved;
+}
+export function toggleSavedWorkshop(s,id){const saved=savedWorkshops(s),index=saved.indexOf(id);if(index<0)saved.push(id);else saved.splice(index,1);return index<0;}
+export function registrationStep(s,requested){
+ const stages=['info','ticket','workshops','review','payment'];
+ if(!stages.includes(requested))return 'info';
+ if(['workshops','review','payment'].includes(requested)){
+  try{validateRegistration(s.draft);}catch{return 'info';}
+  if(!s.draft.category)return 'ticket';
+ }
+ if(requested==='workshops'&&conf(s).mode==='open')return 'review';
+ if(requested==='payment'&&!s.draft.accepted)return 'review';
+ return requested;
+}
+export function openPreviewMessage(s,id){
+ const message=s.inbox.find(m=>m.id===id);
+ if(!message)throw Error('This preview message is no longer available.');
+ const conference=message.conference?s.conferences.find(c=>c.id===message.conference):conf(s);
+ if(!conference)throw Error('This conference is no longer available.');
+ if(message.attendee&&!conference.registrations.some(r=>r.id===message.attendee))throw Error('This registration is no longer available.');
+ if(s.active!==conference.id){s.draft={};s.emailDraft=null;}
+ s.active=conference.id;
+ if(message.attendee)s.session.attendee=message.attendee;
+ return message.link||'portal';
+}

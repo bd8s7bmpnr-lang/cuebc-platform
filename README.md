@@ -10,7 +10,7 @@ An interactive, responsive frontend for CUEBC conference registration and manage
 
 Use **Preview controls** to switch attendee accounts and organizer roles, turn on conference-day online access, open the local email inbox, or restore the seed data. Changes persist in this browser and are isolated from other visitors.
 
-Organizer sign-in uses the displayed demo identity and verification code **123456**. Attendee sign-in links are delivered to the preview inbox; `attendee1@example.test` is a seeded attendee. New registrations must use fictional contact details.
+Organizer sign-in uses the displayed demo identity and verification code **123456**. Attendee sign-in links are delivered to the preview inbox; `attendee1@example.test` is a seeded attendee. New registrations must use fictional contact details. **Fill with sample details** supplies a unique fictional attendee to make testing quick. Saved workshop shortlists are separate for each attendee and conference.
 
 ## Implemented frontend
 
