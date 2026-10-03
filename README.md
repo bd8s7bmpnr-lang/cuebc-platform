@@ -28,4 +28,6 @@ CUEBC must approve final policy text, receipt/tax details, configuration and unp
 
 ## Ownership and hosting
 
-This private repository belongs to `bd8s7bmpnr-lang`. A development hosting service has not been connected. Repository creation does not publish the website.
+This public repository belongs to `bd8s7bmpnr-lang`. The development preview uses free GitHub Pages, published from the `docs/` folder on `main`. Changes pushed to that folder update the preview automatically.
+
+The initial preview opens the reviewed mockup gallery. The functional frontend has not yet been implemented. All demo data is illustrative.
