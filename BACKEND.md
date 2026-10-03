@@ -62,6 +62,8 @@ This command prepares `.local/verification/supabase` using the committed config 
 5. Future tables/functions do not inherit unintended public permissions.
 6. The health endpoint is reachable over the actual REST API; application tables reject public reads.
 
+CI additionally starts a development database first and compares its records before and after both verification resets. To exercise that check locally with development running, use `CUEBC_VERIFY_DEV_ISOLATION=1 npm run test:backend`.
+
 Only the verification database is reset. Development state is not a reset target. Hosted URLs and inherited cloud configuration are rejected/removed by the runner. Its success report is `.local/verification-result.json`; CLI diagnostics remain in `.local/last-cli.log`. Do not commit the local directory or upload raw service diagnostics containing keys. CI uploads only the sanitized verification summary.
 
 `npm run verify` runs frontend/unit checks, syntax checks and database verification together. A skipped/failed database check is not a passing milestone. The GitHub workflow does not publish the website or deploy to a cloud database.

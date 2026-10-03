@@ -15,6 +15,7 @@ jobs:
     timeout-minutes: 30
     env:
       CUEBC_LOCAL_RUNTIME: docker
+      CUEBC_VERIFY_DEV_ISOLATION: '1'
       DO_NOT_TRACK: '1'
     steps:
       - uses: actions/checkout@v4
@@ -25,10 +26,14 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run check
+      - run: npm run backend:start
       - run: npm run test:backend
+      - run: npm run backend:status
       - uses: actions/upload-artifact@v4
         with:
           name: foundation-verification
           path: .local/verification-result.json
           if-no-files-found: error
           retention-days: 14
+      - if: always()
+        run: npm run backend:stop

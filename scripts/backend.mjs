@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { Client } from 'pg';
+import { createHash } from 'node:crypto';
 import { root, localDirectory, prepareWorkspace, runLocalCLI, localConnection } from './local-runtime.mjs';
 import { createBackendClient } from '../docs/app/data.js';
 
@@ -39,6 +40,8 @@ try {
     await runLocalCLI(['stop']); console.log('Local backend stopped; its database is preserved.');
   } else if(command==='verify') {
     const workspace=await prepareWorkspace('verification');
+    const devConnection=process.env.CUEBC_VERIFY_DEV_ISOLATION==='1' ? await localConnection() : null;
+    const developmentBefore=devConnection ? await fingerprint(devConnection) : null;
     let started=false;
     const results=[];
     try {
@@ -59,7 +62,11 @@ try {
         results.at(-1).apiHealth=result;
         results.at(-1).anonymousRead=await verifyAnonymousAccess(connection);
       }
-      await writeFile(path.join(localDirectory,'verification-result.json'),JSON.stringify({verifiedAt:new Date().toISOString(),runtime,results},null,2));
+      if(devConnection) {
+        if(devConnection.databaseUrl===connection.databaseUrl) throw Error('Development and verification must have different databases.');
+        if(developmentBefore!==await fingerprint(devConnection)) throw Error('Verification changed development data.');
+      }
+      await writeFile(path.join(localDirectory,'verification-result.json'),JSON.stringify({verifiedAt:new Date().toISOString(),runtime,developmentIsolation:devConnection?'verified':'not exercised',results},null,2));
       console.log('Two clean installations, database invariants, fixture repeatability, and API access checks passed.');
     } finally {
       if(started) await runLocalCLI(['stop'],workspace);
@@ -75,4 +82,15 @@ async function verifyAnonymousAccess(connection) {
     if(![401,403].includes(response.status)) throw Error(`Unexpected public access to ${table}: ${response.status}`);
   }
   return 'All 9 tables deny anonymous reads';
+}
+
+async function fingerprint(connection) {
+  return withDatabase(connection,async client=>{
+    const hash=createHash('sha256');
+    for(const table of ['private.installation','public.organizations','public.conferences','public.ticket_types','public.rooms','public.time_blocks','public.presenters','public.workshops']) {
+      const result=await client.query(`select row_to_json(t)::text as record from ${table} t order by row_to_json(t)::text`);
+      hash.update(JSON.stringify(result.rows));
+    }
+    return hash.digest('hex');
+  });
 }
