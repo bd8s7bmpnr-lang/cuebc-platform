@@ -5,7 +5,9 @@ begin;
 create schema if not exists private;
 revoke all on schema private from public, anon, authenticated;
 alter default privileges for role postgres in schema public revoke all on tables from anon, authenticated;
-alter default privileges for role postgres in schema public revoke execute on functions from public, anon, authenticated;
+-- PostgreSQL grants function EXECUTE to PUBLIC globally by default. A per-schema
+-- REVOKE cannot undo that global default; revoke it at the owner level instead.
+alter default privileges for role postgres revoke execute on functions from public, anon, authenticated;
 alter default privileges for role postgres in schema public revoke all on sequences from anon, authenticated;
 
 create table public.organizations (

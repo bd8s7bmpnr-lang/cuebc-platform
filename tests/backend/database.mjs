@@ -20,7 +20,7 @@ export async function verifyDatabase(client,{pass}) {
   for(const role of ['anon','authenticated']) {
     for(const table of tables) {
       for(const privilege of ['SELECT','INSERT','UPDATE','DELETE']) {
-        assert.equal((await client.query('select has_table_privilege($1,$2,$3) as allowed',[role,`public.${table}`,privilege])).rows[0].allowed,false);
+        assert.equal((await client.query('select has_table_privilege($1,$2,$3) as allowed',[role,`public.${table}`,privilege])).rows[0].allowed,false,`${role} must not have ${privilege} on ${table}`);
       }
     }
     await client.query('begin');
@@ -59,8 +59,8 @@ export async function verifyDatabase(client,{pass}) {
     await client.query('create table public.future_table_test(id integer)');
     await client.query("create function public.future_function_test() returns integer language sql as 'select 1'");
     for(const role of ['anon','authenticated']) {
-      assert.equal((await client.query("select has_table_privilege($1,'public.future_table_test','SELECT') as allowed",[role])).rows[0].allowed,false);
-      assert.equal((await client.query("select has_function_privilege($1,'public.future_function_test()','EXECUTE') as allowed",[role])).rows[0].allowed,false);
+      assert.equal((await client.query("select has_table_privilege($1,'public.future_table_test','SELECT') as allowed",[role])).rows[0].allowed,false,`${role} must not inherit SELECT on future tables`);
+      assert.equal((await client.query("select has_function_privilege($1,'public.future_function_test()','EXECUTE') as allowed",[role])).rows[0].allowed,false,`${role} must not inherit EXECUTE on future functions`);
     }
     record('Future tables/functions do not receive unintended public permissions');
   } finally { await client.query('rollback'); }
