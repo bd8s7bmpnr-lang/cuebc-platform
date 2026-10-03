@@ -1,0 +1,1 @@
+{"name":"cuebc-platform","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.js","check":"node --check docs/app/app.js && node --check docs/app/views.js && node --check docs/app/admin.js && node --check docs/app/model.js"}}

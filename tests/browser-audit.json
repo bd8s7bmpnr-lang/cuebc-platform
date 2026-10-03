@@ -1,0 +1,882 @@
+[
+  {
+    "bad": false,
+    "images": 0,
+    "title": "SHIFTHappens!",
+    "url": "#/",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Find your next idea",
+    "url": "#/program",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "AI in Middle School",
+    "url": "#/workshop/w1",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Designing for Inclusion with Canva!",
+    "url": "#/workshop/w2",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "The Teacher’s Knowledge Base, Powered by AI",
+    "url": "#/workshop/w3",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Designing AI-Resilient Assessments",
+    "url": "#/workshop/w4",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Register for CUEBC 2026",
+    "url": "#/register/info",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Register for CUEBC 2026",
+    "url": "#/register/ticket",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Welcome, Jordan",
+    "url": "#/portal",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Your receipt",
+    "url": "#/receipt",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Edit your registration",
+    "url": "#/edit/info",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Edit your registration",
+    "url": "#/edit/workshops",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Cancel your registration",
+    "url": "#/cancel",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "My saved day",
+    "url": "#/schedule",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Your online conference",
+    "url": "#/online",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference messages",
+    "url": "#/messages",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Plan your conference day",
+    "url": "#/venue",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Policies & privacy",
+    "url": "#/policies",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference waitlist",
+    "url": "#/waitlist",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Welcome to My CUEBC",
+    "url": "#/sign-in",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Check your email",
+    "url": "#/sign-in/sent",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "This link has expired",
+    "url": "#/sign-in/expired",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference overview",
+    "url": "#/admin/dashboard",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Your conferences",
+    "url": "#/admin/library",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Create a conference",
+    "url": "#/admin/create",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Registrations",
+    "url": "#/admin/registrations",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/edit",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/workshops",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/payment",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/communications",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/activity",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/notes",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Build the conference program",
+    "url": "#/admin/program",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Edit workshop",
+    "url": "#/admin/workshop/w1",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Presenters",
+    "url": "#/admin/presenters",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Edit presenter",
+    "url": "#/admin/presenter/p1",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Waitlists",
+    "url": "#/admin/waitlists/conference",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Waitlists",
+    "url": "#/admin/waitlists/workshop",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Payments",
+    "url": "#/admin/payments",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Review refund exception",
+    "url": "#/admin/refund/r1",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Communications",
+    "url": "#/admin/communications",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Compose a message",
+    "url": "#/admin/compose",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Reports",
+    "url": "#/admin/reports",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Custom registration export",
+    "url": "#/admin/export",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Registration form builder",
+    "url": "#/admin/form",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Walk-in registration",
+    "url": "#/admin/walkin",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/general",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/registration",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/workshops",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/payments",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/email",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/branding",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Team & permissions",
+    "url": "#/admin/settings/team",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/privacy",
+    "viewport": 390,
+    "width": 390
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "SHIFTHappens!",
+    "url": "#/",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Find your next idea",
+    "url": "#/program",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "AI in Middle School",
+    "url": "#/workshop/w1",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Designing for Inclusion with Canva!",
+    "url": "#/workshop/w2",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "The Teacher’s Knowledge Base, Powered by AI",
+    "url": "#/workshop/w3",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Designing AI-Resilient Assessments",
+    "url": "#/workshop/w4",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Register for CUEBC 2026",
+    "url": "#/register/info",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Register for CUEBC 2026",
+    "url": "#/register/ticket",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Welcome, Jordan",
+    "url": "#/portal",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Your receipt",
+    "url": "#/receipt",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Edit your registration",
+    "url": "#/edit/info",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Edit your registration",
+    "url": "#/edit/workshops",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Cancel your registration",
+    "url": "#/cancel",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "My saved day",
+    "url": "#/schedule",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Your online conference",
+    "url": "#/online",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference messages",
+    "url": "#/messages",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Plan your conference day",
+    "url": "#/venue",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Policies & privacy",
+    "url": "#/policies",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference waitlist",
+    "url": "#/waitlist",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Welcome to My CUEBC",
+    "url": "#/sign-in",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Check your email",
+    "url": "#/sign-in/sent",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "This link has expired",
+    "url": "#/sign-in/expired",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference overview",
+    "url": "#/admin/dashboard",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Your conferences",
+    "url": "#/admin/library",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Create a conference",
+    "url": "#/admin/create",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Registrations",
+    "url": "#/admin/registrations",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/edit",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/workshops",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/payment",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/communications",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/activity",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Jordan Lee",
+    "url": "#/admin/attendee/r1/notes",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Build the conference program",
+    "url": "#/admin/program",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Edit workshop",
+    "url": "#/admin/workshop/w1",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Presenters",
+    "url": "#/admin/presenters",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Edit presenter",
+    "url": "#/admin/presenter/p1",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Waitlists",
+    "url": "#/admin/waitlists/conference",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Waitlists",
+    "url": "#/admin/waitlists/workshop",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Payments",
+    "url": "#/admin/payments",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Review refund exception",
+    "url": "#/admin/refund/r1",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Communications",
+    "url": "#/admin/communications",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Compose a message",
+    "url": "#/admin/compose",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Reports",
+    "url": "#/admin/reports",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Custom registration export",
+    "url": "#/admin/export",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Registration form builder",
+    "url": "#/admin/form",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Walk-in registration",
+    "url": "#/admin/walkin",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/general",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/registration",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/workshops",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/payments",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/email",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/branding",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Team & permissions",
+    "url": "#/admin/settings/team",
+    "viewport": 1440,
+    "width": 1440
+  },
+  {
+    "bad": false,
+    "images": 0,
+    "title": "Conference settings",
+    "url": "#/admin/settings/privacy",
+    "viewport": 1440,
+    "width": 1440
+  }
+]

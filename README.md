@@ -1,33 +1,48 @@
-# CUEBC Platform
+# CUEBC conference platform
 
-Development home for a CUEBC-specific conference registration and management platform.
+An interactive, responsive frontend for CUEBC conference registration and management, using the approved mockup styles and official CUEBC assets.
 
-## Current baseline
+- [Live frontend](https://bd8s7bmpnr-lang.github.io/cuebc-platform/)
+- [Organizer workspace](https://bd8s7bmpnr-lang.github.io/cuebc-platform/#/admin)
+- [Original design reference](https://bd8s7bmpnr-lang.github.io/cuebc-platform/design/index.html)
 
-The reviewed visual design set is in [`docs/design`](docs/design/index.html): 70 desktop screens and states, 23 mobile views, official identity assets, editable HTML/CSS, and a source-linked [design handoff](docs/design/handoff.html).
+## Try the preview
 
-Open `docs/design/index.html` in a browser after cloning or downloading the repository. The gallery works offline. The HTML screens illustrate navigation and interface states; they are not yet the functional frontend.
+Use **Preview controls** to switch attendee accounts and organizer roles, turn on conference-day online access, open the local email inbox, or restore the seed data. Changes persist in this browser and are isolated from other visitors.
 
-## Next implementation phase
+Organizer sign-in uses the displayed demo identity and verification code **123456**. Attendee sign-in links are delivered to the preview inbox; `attendee1@example.test` is a seeded attendee. New registrations must use fictional contact details.
 
-Build the attendee and organizer frontend from the reviewed mockups, including responsive layouts, working navigation, registration validation, calculated ticket totals, workshop filtering and selection, management tools, and simulated confirmation/payment/waitlist states.
+## Implemented frontend
 
-Use clearly labelled sample data behind a replaceable data-service interface. Include a demo reset option so complete journeys can be tested repeatedly. Persistent records, authentication and permissions, payment processing, email delivery, and atomic capacity enforcement will be connected and tested in the backend phase.
+Attendees can search/filter workshops, save a day plan, register using CUEBC ticket categories, apply valid discount codes, simulate approved/declined/pending checkout, recover payment, view their portal, edit details, verify an email change, request a ticket change, select workshops, accept waitlist offers, access simulated online rooms, read messages, download receipts/calendar files, and cancel under the no-refund policy.
 
-## Scope
+Organizers can create/copy conferences, manage registrations and arrivals, review bulk actions, edit attendees, approve ticket requests, schedule workshops with conflict/capacity checks, manage presenters, publish program drafts, issue expiring waitlist offers, reconcile payments, record authorized refund exceptions, compose/review targeted messages, download reports and custom CSV/XLSX exports, draft/publish registration questions, configure conference settings, manage demo team roles, export data requests, inspect audit history, archive conferences, and register walk-ins.
 
-- Attendee: conference home, program, workshop details, registration and payment flow, confirmation, My CUEBC, receipts, editing, messages, and online access.
-- Organizer: conference library, dashboard, registrations and attendee detail, program and presenters, waitlists, payments, communications, reports and exports, form builder, conference settings, and walk-in registration.
-- Supporting states: pending/failed payments, closed registration, cancellation, waitlist offers, access recovery, permissions and conflict handling.
+## Scope boundary
 
-## Data and launch boundaries
+This is a frontend preview, **not a live registration service**. Authentication, authorization, email, payment processing, meeting access, invitations, and retention jobs require the future backend. Client role restrictions demonstrate interface behavior; they do not secure data. There are no secrets, real payments, or real attendee records in this public repository. Browser storage is not suitable for production personal information.
 
-Sample identities, operational counts, capacities, room assignments and status examples are illustrative. Confirmed 2026 event information and ticket prices are documented with sources in the design handoff.
+Workshop titles and presenter names are based on CUEBC's published offerings. Workshop times, room assignments, capacities, presenter biographies, and organizer records are illustrative. Final policies, contact details, sender/provider connections, receipt issuer/tax details, and the program schedule require CUEBC confirmation.
 
-CUEBC must approve final policy text, receipt/tax details, configuration and unpublished event information before live release. No real attendee data, credentials or payment secrets belong in this repository.
+## Development
 
-## Ownership and hosting
+No build step or third-party frontend dependencies are required. Serve `docs/` with a local static server, for example:
 
-This public repository belongs to `bd8s7bmpnr-lang`. The development preview uses free GitHub Pages, published from the `docs/` folder on `main`. Changes pushed to that folder update the preview automatically.
+```sh
+python3 -m http.server 8766 --bind 127.0.0.1 --directory docs
+npm test
+npm run check
+```
 
-The initial preview opens the reviewed mockup gallery. The functional frontend has not yet been implemented. All demo data is illustrative.
+GitHub Pages publishes `main:/docs`. Hash routing supports direct page links and refreshes under the repository subpath.
+
+- `docs/app/model.js`: state, seed records and domain rules
+- `docs/app/views.js`: attendee views
+- `docs/app/admin.js`: organizer views
+- `docs/app/app.js`: routing, event handling and persistence
+- `docs/app/ui.js`: shared components and file exports
+- `docs/design/styles.css`: unchanged original design tokens and components
+- `docs/app/app.css`: interactive and responsive extensions
+- `tests/model.test.js`: business rules, exports and route-render regression checks
+
+See `FRONTEND-COVERAGE.md` for the mockup-to-implementation map and validation record.
