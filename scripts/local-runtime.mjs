@@ -57,7 +57,11 @@ export async function runLocalCLI(args, workspace = root) {
   } catch(error) {
     // Full provider diagnostics stay in ignored local files, not terminal output or git.
     await writeFile(path.join(localDirectory,'last-cli.log'),String(error.stderr || error.message),{mode:0o600});
-    throw Error(`Local Supabase ${command} failed. See .local/last-cli.log for diagnostics.`);
+    const diagnostic=String(error.stderr || error.message).split('\n')
+      .filter(line=>!/key|token|password|secret|authorization|jwt|postgres(?:ql)?:\/\//i.test(line))
+      .map(line=>line.replace(/eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/g,'[redacted]'))
+      .slice(-12).join('\n').slice(-2000);
+    throw Error(`Local Supabase ${command} failed. See .local/last-cli.log for full local diagnostics.\n${diagnostic}`);
   }
 }
 
