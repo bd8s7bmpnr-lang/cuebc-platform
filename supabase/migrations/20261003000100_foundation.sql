@@ -8,6 +8,8 @@ alter default privileges for role postgres in schema public revoke all on tables
 -- PostgreSQL grants function EXECUTE to PUBLIC globally by default. A per-schema
 -- REVOKE cannot undo that global default; revoke it at the owner level instead.
 alter default privileges for role postgres revoke execute on functions from public, anon, authenticated;
+-- Supabase also defines per-schema grants; remove those independently.
+alter default privileges for role postgres in schema public revoke execute on functions from public, anon, authenticated;
 alter default privileges for role postgres in schema public revoke all on sequences from anon, authenticated;
 
 create table public.organizations (
